@@ -22,11 +22,18 @@ jobs:
       - name: install deps
         run: pnpm install
         
-      - name: start
-        run: pnpm start
-        
 
       - name: copy dist to zzall.github.io
         run: |
           echo 到123
+          
+          
+          
+  build2:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: post to tencent centos services
+        run: |
+          yum -v
         
