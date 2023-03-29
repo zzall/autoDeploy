@@ -1,0 +1,32 @@
+name: CI
+
+
+on:
+  push:
+    branches: [ "master" ]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2.2.2
+        with:
+          version: '7.11.0'
+
+      - name: install deps
+        run: pnpm install
+        
+      - name: start
+        run: pnpm start
+        
+
+      - name: copy dist to zzall.github.io
+        run: |
+          echo 到123
+        
