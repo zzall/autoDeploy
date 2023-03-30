@@ -47,7 +47,7 @@ jobs:
           # Sorce dir to deploy
           src: ./app.js
           # SSH address
-          host: root@150.158.182.28
+          host: 150.158.182.28
           # Remote dir path
           remote: /root/node-services/testDeploy
           # SSH Port
