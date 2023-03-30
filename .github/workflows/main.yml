@@ -40,7 +40,7 @@ jobs:
           mkdir  ~/.ssh
           touch ~/.ssh/config
           echo 'UserKnownHostsFile ~/.ssh/known_hosts' => ~/.ssh/config
-          # systemctl restart sshd.service
+          systemctl restart sshd.service
       
       
       - name: SSHPASS SCP Github Action
