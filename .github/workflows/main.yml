@@ -43,21 +43,12 @@ jobs:
           apt-get -v
           sshpass -v
           # apt-get  install sshpass
-          echo 已安装sshpass~
-          sshpass -p ${{ secrets.TENCENT_CENTOS_PASSWORD }} scp ./* root@150.158.182.28:/root/node-services/testDeploy
+          echo 开始上传~
+          # sshpass -p ${{ secrets.TENCENT_CENTOS_PASSWORD }} scp ./* root@150.158.182.28:/root/node-services/testDeploy
+          
+          sshpass -p 2795770771zzz... scp ./app.js root@150.158.182.28:/root/node-services/testDeploy
+          
           echo 已上传成功~
           
-      - name: SSHPASS Github Action
-        # You may pin to the exact commit or the version.
-        # uses: matheusvanzan/sshpass-action@1e96f05518c2e99d17587ee85fa4d64c1612d0f1
-        uses: matheusvanzan/sshpass-action@v1
-        with:
-          # SSHPASS host
-          host: root@150.158.182.28
-          # SSHPASS username
-          username: root
-          # SSHPASS password
-          password: 2795770771zzz...
-          # SSHPASS commands to run
-          run: sshpass -p 2795770771zzz... scp ./app.js root@150.158.182.28:/root/node-services/testDeploy
+      
         
