@@ -60,6 +60,7 @@ jobs:
           echo 更改之前
           cat /etc/ssh/sshd_config
           sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config
+          systemctl restart sshd.service
           echo 更改之后
           # cat /etc/ssh/sshd_config
           echo ls之前：
