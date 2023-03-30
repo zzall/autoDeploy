@@ -57,7 +57,7 @@ jobs:
       
       - name: post to tencent centos services
         run: |
-          cat ~/.ssh/config
+          # cat ~/.ssh/config
           cat /etc/ssh/sshd_config
           echo ls之前：
           ls
