@@ -59,7 +59,7 @@ jobs:
         run: |
           echo 更改之前
           cat /etc/ssh/sshd_config
-          sed -i '' 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config
+          sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config
           echo 更改之后
           cat /etc/ssh/sshd_config
           echo ls之前：
@@ -71,7 +71,7 @@ jobs:
           echo 开始上传~
           # sshpass -p ${{ secrets.TENCENT_CENTOS_PASSWORD }} scp ./* root@150.158.182.28:/root/node-services/testDeploy
           
-          sshpass -p 2795770771zzz... scp ./app.js root@150.158.182.28:/root/node-services/testDeploy
+          # sshpass -p 2795770771zzz... scp ./app.js root@150.158.182.28:/root/node-services/testDeploy
           
           echo 已上传成功~
           
