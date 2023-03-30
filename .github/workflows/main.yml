@@ -41,7 +41,7 @@ jobs:
           ls
           echo 之后的是：
           apt-get -v
-          # apt-get  install sshpass
+          apt-get  install sshpass
           echo 已安装sshpass~
           # sshpass -p ${{ secrets.TENCENT_CENTOS_PASSWORD }} 
         
