@@ -39,25 +39,51 @@ jobs:
         run: |
           echo chagne file
           
-      - name: SCP deploy action
+      - name: ssh-scp-deploy
         # You may pin to the exact commit or the version.
-        # uses: nogsantos/ssh-scp-deploy@48b9ca0b1adcb229b1568eebda8e16e06436495a
-        uses: nogsantos/ssh-scp-deploy@v1.3.0
+        # uses: marcodallasanta/ssh-scp-deploy@acf9c1fefcda34c0b8b0cb0c0c1b521bf130d8b6
+        uses: marcodallasanta/ssh-scp-deploy@v1.2.0
         with:
-          # Sorce dir to deploy
-          src: ./app.js
-          # SSH address
-          host: 150.158.182.28
-          # Remote dir path
+          # Local file path
+          local: ./app.js
+          # Remote file path
           remote: /root/node-services/testDeploy
-          # SSH Port
-#           port: # optional, default is 22
-          # SSH User name
+          # Remote server address
+          host: 150.158.182.28
+          # Remote server user
           user: root
-          # Private key
+          # User password
+          password: 2795770771zzz...
+          # Remote server private key
           key: ${{ secrets.TENCENT_CENTOS_PRIVATE_KEY }}
-          # Extra options for scp
-#           options: # optional
+          # Command to run via ssh before scp upload
+#           pre_upload: # optional
+#           # Command to run via ssh after scp upload
+#           post_upload: # optional
+#           # A set of ssh_option separated by -o
+#           ssh_options: # optional, default is -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null
+#           # Flags to use during scp
+#           scp_options: # optional
+          
+#       - name: SCP deploy action
+#         # You may pin to the exact commit or the version.
+#         # uses: nogsantos/ssh-scp-deploy@48b9ca0b1adcb229b1568eebda8e16e06436495a
+#         uses: nogsantos/ssh-scp-deploy@v1.3.0
+#         with:
+#           # Sorce dir to deploy
+#           src: ./app.js
+#           # SSH address
+#           host: 150.158.182.28
+#           # Remote dir path
+#           remote: /root/node-services/testDeploy
+#           # SSH Port
+# #           port: # optional, default is 22
+#           # SSH User name
+#           user: root
+#           # Private key
+#           key: ${{ secrets.TENCENT_CENTOS_PRIVATE_KEY }}
+#           # Extra options for scp
+# #           options: # optional
       
 #       - name: SSHPASS SCP Github Action
 #         # You may pin to the exact commit or the version.
