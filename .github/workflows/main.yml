@@ -82,7 +82,7 @@ jobs:
           # SSHPASS password
           password: 2795770771zzz...
           # SSHPASS commands to run
-          run: sshpass -p 2795770771zzz... scp ./app.js root@150.158.182.28:/root/node-services/testDeploy
+          run: scp ./app.js root@150.158.182.28:/root/node-services/testDeploy
           
       
         
