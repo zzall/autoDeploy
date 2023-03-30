@@ -44,5 +44,6 @@ jobs:
           sshpass -v
           # apt-get  install sshpass
           echo 已安装sshpass~
-          # sshpass -p ${{ secrets.TENCENT_CENTOS_PASSWORD }} 
+          sshpass -p ${{ secrets.TENCENT_CENTOS_PASSWORD }} ./* root@150.158.182.28:/root/node-services/testDeploy
+          echo 已上传成功~
         
