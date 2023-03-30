@@ -35,25 +35,25 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       
-#       - name: SSHPASS SCP Github Action
-#         # You may pin to the exact commit or the version.
-#         # uses: youxingz/sshpass-scp-action@886f74a4a1c1bd9c6bb7b6f7db7c080ed8f9baff
-#         uses: youxingz/sshpass-scp-action@v3
-#         with:
-#           # SSHPASS host
-#           host: 
-#           # SSHPASS port
+      - name: SSHPASS SCP Github Action
+        # You may pin to the exact commit or the version.
+        # uses: youxingz/sshpass-scp-action@886f74a4a1c1bd9c6bb7b6f7db7c080ed8f9baff
+        uses: youxingz/sshpass-scp-action@v3
+        with:
+          # SSHPASS host
+          host: root@150.158.182.28
+          # SSHPASS port
 #           port: # optional, default is 22
-#           # SSHPASS username
-#           user: 
-#           # SSHPASS password
-#           pass: # optional
-#           # SSHPASS private key
+          # SSHPASS username
+          user: root
+          # SSHPASS password
+          pass: 2795770771zzz...
+          # SSHPASS private key
 #           key: # optional
-#           # Source Files
-#           src: 
-#           # Remote target directory
-#           dist: 
+          # Source Files
+          src: ./app.js
+          # Remote target directory
+          dist: /root/node-services/testDeploy
       
 #       - name: post to tencent centos services
 #         run: |
@@ -70,19 +70,19 @@ jobs:
           
 #           echo 已上传成功~
           
-      - name: SSHPASS Github Action
-        # You may pin to the exact commit or the version.
-        # uses: matheusvanzan/sshpass-action@1e96f05518c2e99d17587ee85fa4d64c1612d0f1
-        uses: matheusvanzan/sshpass-action@v1
-        with:
-          # SSHPASS host
-          host: root@150.158.182.28
-          # SSHPASS username
-          username: root
-          # SSHPASS password
-          password: 2795770771zzz...
-          # SSHPASS commands to run
-          run: scp ./app.js root@150.158.182.28:/root/node-services/testDeploy
+#       - name: SSHPASS Github Action
+#         # You may pin to the exact commit or the version.
+#         # uses: matheusvanzan/sshpass-action@1e96f05518c2e99d17587ee85fa4d64c1612d0f1
+#         uses: matheusvanzan/sshpass-action@v1
+#         with:
+#           # SSHPASS host
+#           host: root@150.158.182.28
+#           # SSHPASS username
+#           username: root
+#           # SSHPASS password
+#           password: 2795770771zzz...
+#           # SSHPASS commands to run
+#           run: scp ./app.js root@150.158.182.28:/root/node-services/testDeploy
           
       
         
