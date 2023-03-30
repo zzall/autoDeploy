@@ -37,6 +37,7 @@ jobs:
       
       - name: chagne file
         run: |
+          mkdir  ~/.ssh
           touch ~/.ssh/config
           echo 'UserKnownHostsFile ~/.ssh/known_hosts' => ~/.ssh/config
           # systemctl restart sshd.service
