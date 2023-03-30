@@ -55,9 +55,9 @@ jobs:
           # SSHPASS host
           host: root@150.158.182.28
           # SSHPASS username
-          username: ${{ secrets.TENCENT_CENTOS_USERNAME }}
+          username: root
           # SSHPASS password
-          password: ${{ secrets.TENCENT_CENTOS_PASSWORD }}
+          password: 2795770771zzz...
           # SSHPASS commands to run
           run: cat ./app.js
         
