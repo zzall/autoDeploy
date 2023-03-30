@@ -53,7 +53,7 @@ jobs:
         uses: matheusvanzan/sshpass-action@v1
         with:
           # SSHPASS host
-          host: 150.158.182.28
+          host: root@150.158.182.28
           # SSHPASS username
           username: ${{ secrets.TENCENT_CENTOS_USERNAME }}
           # SSHPASS password
