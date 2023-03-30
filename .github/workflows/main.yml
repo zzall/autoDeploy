@@ -35,6 +35,7 @@ jobs:
     steps:
       - name: post to tencent centos services
         run: |
+          echo ls之前：
           ls
           echo 之后的是：
           apt-get  install sshpass
