@@ -44,7 +44,7 @@ jobs:
         uses: marcodallasanta/ssh-scp-deploy@v1.2.0
         with:
           # Local file path
-          local: ./app.js
+          local: ./*
           # Remote file path
           remote: /root/node-services/testDeploy
           # Remote server address
@@ -56,8 +56,23 @@ jobs:
           # Remote server private key
           key: ${{ secrets.TENCENT_CENTOS_PRIVATE_KEY }}
           # Command to run via ssh before scp upload
-          pre_upload: ls
-          post_upload: echo post_upload && docker -v
+          pre_upload: cd node-services/testDeploy 
+          post_upload: 
+            cd node-services/testDeploy 
+            && ls
+            && systemctl start docker
+            && docker stop $(docker ps -a -q)
+            && docker rm $(docker ps -a -q)
+            && docker rmi $(docker images -q)
+            && docker build -t testdeploy .
+            && docker run --name testdeploy-container -d -p 80:3000 testdeploy
+            
+#             && pm2 start 'pnpm start' 
+#             && pnpm start
+#             && pm2 list 
+            
+#             && pm2 log 
+#             && docker -v
             
             # docker -v
             # docker 
