@@ -55,9 +55,7 @@ jobs:
           key: ${{ secrets.TENCENT_CENTOS_PRIVATE_KEY }}
           # Command to run via ssh before scp upload
           pre_upload: |
-            echo 上传之前ls-----------
             ls
-            echo ls--------------
           post_upload: |
             echo 1
             # docker -v
