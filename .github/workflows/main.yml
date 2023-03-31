@@ -54,8 +54,7 @@ jobs:
           # Remote server private key
           key: ${{ secrets.TENCENT_CENTOS_PRIVATE_KEY }}
           # Command to run via ssh before scp upload
-          pre_upload: |
-            ls
+          pre_upload: ls
           post_upload: |
             echo 1
             # docker -v
