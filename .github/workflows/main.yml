@@ -23,7 +23,7 @@ jobs:
 #         run: pnpm install
         
 
-      - name: copy dist to zzall.github.io
+      - name: if you need build , change here~
         run: |
           echo 到123
           ls
