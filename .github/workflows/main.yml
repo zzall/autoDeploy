@@ -61,11 +61,14 @@ jobs:
             cd node-services/testDeploy 
             && ls 
             && pnpm install
-            && pm2 list 
-            && pm2 start 'pnpm start' 
-            && pm2 log 
             && echo post_upload 
-            && docker -v
+            && pnpm start
+            
+            
+#             && pm2 list 
+#             && pm2 start 'pnpm start' 
+#             && pm2 log 
+#             && docker -v
             
             # docker -v
             # docker 
