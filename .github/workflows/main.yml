@@ -58,15 +58,13 @@ jobs:
             echo 上传之前ls-----------
             ls
             echo ls--------------
-#           # Command to run via ssh after scp upload
           post_upload: |
             echo 1
-            docker -v
-            docker 
-            docker build 
-#           # A set of ssh_option separated by -o
-#           ssh_options: # optional, default is -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null
+            # docker -v
+            # docker 
+            # docker build 
+#         ssh_options: # optional, default is -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null
 #           # Flags to use during scp
-#           scp_options: # optional
+#         scp_options: # optional
 
         
