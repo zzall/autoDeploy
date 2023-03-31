@@ -79,8 +79,8 @@ jobs:
 #             && docker stop $(docker ps -a -q)
 #             && docker rm $(docker ps -a -q)
 #             && docker rmi $(docker images -q)
-#             && docker build -t testDeploy .
-#             && docker run --name testDeploy-container -d -p 80:3000 testDeploy
+#             && docker build -t testdeploy .
+#             && docker run --name testdeploy-container -d -p 80:3000 testdeploy
             
 #             && pm2 start 'pnpm start' 
 #             && pnpm start
