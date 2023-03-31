@@ -42,7 +42,7 @@ jobs:
         uses: marcodallasanta/ssh-scp-deploy@v1.2.0
         with:
           # Local file path
-          local: ./*
+          local: ./app.js
           # Remote file path
           remote: /root/node-services/testDeploy
           # Remote server address
