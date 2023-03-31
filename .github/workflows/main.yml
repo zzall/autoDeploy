@@ -56,8 +56,8 @@ jobs:
           # Remote server private key
           key: ${{ secrets.TENCENT_CENTOS_PRIVATE_KEY }}
           # Command to run via ssh before scp upload
-          pre_upload: ls
-          post_upload: echo post_upload && docker -v
+          pre_upload: cd node-services/testDeploy 
+          post_upload: ls && pm2 list && pm2 start 'pnpm start' && pm2 log && echo post_upload && docker -v
             
             # docker -v
             # docker 
